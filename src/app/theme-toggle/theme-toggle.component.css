@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Estilo do "body" do componente */
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    margin: 0;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.label{
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    border-radius: 50px;
+    height: 26px;
+    width: 50px;
+}
+
+.ball{
+    background-color: #fff;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: .1s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+
+/* Cores dos ícones */
+.fa-moon{
+    color: rgb(188, 221, 248);
+}
+.fa-sun{
+    color: rgb(252, 187, 89);
+}
