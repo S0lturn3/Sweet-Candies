@@ -1,14 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-
-const checkbox = document.getElementById('checkbox');
-
-function mudarTema(){
-  checkbox?.addEventListener('change', () => {
-      // Muda o tema do site
-      document.body.classList.toggle('light');
-  })
-}
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'theme-toggle',
@@ -25,7 +16,6 @@ export class ThemeToggleComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    mudarTema()
   }
 
 }
