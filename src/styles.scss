@@ -1,17 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 
-// ----- Definição de variáveis ----- //
+// ----- Definição dos temas ----- //
 .dark-theme{
     --background-color: #1a1a1a;
     --text-color: #f5f5f5;
     --header-color: #2b2b2b;
     --button-color: #1a1a1a;
+    --border-color: #de8cff;
+    --box-color: #e00096;
+
+    --shadow-color: #ffa1e1;
 }
 .light-theme{
     --background-color: #f5f5f5;
     --text-color: #1a1a1a;
     --header-color: #fff;
     --button-color: #fff;
+    --border-color: rgb(231, 255, 174);
+    --box-color: #9fca6b;
+
+    --shadow-color: #172b00;
 }
 
 // ----- Estilos individuais ----- //
@@ -22,9 +30,62 @@ body{
     background-color: var(--background-color);
     color: var(--text-color);
     position: relative;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 h1, h2, h5, p {
     color: var(--text-color);
+}
+// ---------- //
+.options-list{
+    margin: 50px 1px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.option{
+    height: 300px;
+    width: 250px;
+    border: 2px solid var(--border-color);
+    background-color: var(--box-color);
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all .3s ease-out;
+}
+.option:hover{
+    box-shadow: 9px 12px 1px var(--shadow-color);
+    /*transform: translate(-10px,-10px);*/
+    transform: rotate(-5deg);
+}
+
+.item {
+    position: relative; /* or absolute */
+    transition: 2s;
+}
+
+.item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+
+    box-shadow: -50px 80px 4px 10px #555;
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+
+.item:hover{
+    width: 50px;
+    height: 50px;
 }
