@@ -1,11 +1,20 @@
 <!-- Botão de tema Escuro/Claro -->
-<div class="body">                                                          <!-- Esta div irá atuar como uma espécie de Body do componente -->
-    <div>
-        <input type="checkbox" class="checkbox" id="checkbox">              <!-- Cria-se um input de tipo "Checkbox" com classe para CSS e ID para JS/TS -->
-        <label for="checkbox" class="label">                                <!-- Adiciona-se uma label para o input previamente feito, com uma classe para CSS-->
-            <fa-icon [icon]="moonICO" class="fas fa-moon"></fa-icon>        <!-- Estes são os ícones da biblioteca que foi importada: Font Awesome -->
-            <fa-icon [icon]="sunICO" class="fas fa-sun"></fa-icon>
-            <div class="ball"></div>                                        <!-- Esta div servirá como indicador de qual opção está selecionada -->
-        </label>
-    </div>
+<div>
+    <!-- Cria-se um input de tipo "Checkbox" com classe para CSS e ID para JS/TS -->
+    <input type="checkbox" class="checkbox" id="checkbox" (click)="switchTheme()">
+    
+    <!-- Adiciona-se uma label para o input previamente feito, com uma classe para CSS-->
+    <label for="checkbox" class="label">
+        <fa-icon [icon]="moonICO" class="fas fa-moon icon-colors"></fa-icon>
+        <fa-icon [icon]="sunICO" class="fas fa-sun icon-colors"></fa-icon>
+
+        <!-- Esta div servirá como indicador de qual opção está selecionada -->
+        <div class="ball"></div>
+    </label>
 </div>
+
+
+
+
+
+<!-- Running fine -->
