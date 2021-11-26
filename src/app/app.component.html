@@ -1,46 +1,64 @@
 <div>
   <header>
-    <div class="logo-container">
-      <img src="../assets/logos/bakery.png" alt="Bakery Logo">
+    <div class="title-container">
       <h2>{{ title }}</h2>
     </div>
 
-    <nav>
-      <ul>
-        <li><theme-toggle (changeTheme)="switchTheme()" class="toggle"></theme-toggle></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Home</a></li>
-      </ul>
-    </nav>
+    <ul>
+      <li class="hover-underline"><a href="#">Pessoas</a></li>
+      
+      <li class="hover-underline"><a href="#">Doces/Serviços</a></li>
+      
+      <li class="hover-underline"><a href="#">Históricos</a></li>
+      
+      <li class="hover-underline"><a href="#">Contato</a></li>
+      
+      <li><theme-toggle (changeTheme)="switchTheme()" class="toggle"></theme-toggle></li>
+    </ul>
   </header>
-
-  <div class="options-list">
-    <div class="option pessoas">
-      CLIENTES
-    </div>
   
-    <div class="option pessoas">
-      FORNECEDORES
-    </div>
-  
-    <div class="option doces">
-      DOCES E SERVIÇOS
-    </div>
-
-    <div class="option contratos">
-      VENDAS
-    </div>
-
-    <div class="option contratos">
-      AQUISIÇÕES
-    </div>
-
-    <div class="option dados">
-      DADOS
-      <div class="item">
-
-      </div>
-    </div>
-  </div>
 </div>
+
+<!-- Cards com opções [DESCONTINUADO] -->
+  <!-- <div class="options-list">
+    <div class="option-card pessoas">
+      <img src="../assets/logos/team.png" alt="PessoasLogo">
+      <a href="#">CLIENTES</a>
+    </div>
+  
+    <div class="option-card pessoas">
+      <img src="../assets/logos/team.png" alt="PessoasLogo">
+      <a href="#">FORNECEDORES</a>
+    </div>
+  
+    <div class="option-card doces">
+      <img src="../assets/logos/cupcake.png" alt="DocesServiçosLogo">
+      <a href="#">DOCES E SERVIÇOS</a>
+    </div>
+
+    <div class="option-card contratos">
+      <img src="../assets/logos/clipboard.png" alt="ContratosLogo">
+      <a href="#">VENDAS</a>
+    </div>
+
+    <div class="option-card contratos">
+      <img src="../assets/logos/clipboard.png" alt="ContratosLogo">
+      <a href="#">AQUISIÇÕES</a>
+    </div>
+
+    <div class="option-card dados">
+      <img src="../assets/logos/pie-chart.png" alt="DadosLogo">
+      <a href="#">DADOS</a>
+    </div>
+  </div> -->
+
+  <!-- <li class="dropdown">
+
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li> -->
+
