@@ -1,64 +1,45 @@
-<div>
+<div class="sticky-header">
   <header>
-    <div class="title-container">
-      <h2>{{ title }}</h2>
-    </div>
+    <nav>
+      <div class="title">
+        <h2>{{ title }}</h2>
+      </div>
 
-    <ul>
-      <li class="hover-underline"><a href="#">Pessoas</a></li>
-      
-      <li class="hover-underline"><a href="#">Doces/Serviços</a></li>
-      
-      <li class="hover-underline"><a href="#">Históricos</a></li>
-      
-      <li class="hover-underline"><a href="#">Contato</a></li>
-      
-      <li><theme-toggle (changeTheme)="switchTheme()" class="toggle"></theme-toggle></li>
-    </ul>
-  </header>
-  
+      <ul class="list-inline">
+        <li><a href="#" class="hover-underline">Pessoas</a></li>
+        
+        <li><a href="#doces" class="hover-underline">Menu</a></li>
+        
+        <li><a href="#" class="hover-underline">Transações</a></li>
+        
+        <li><a href="#" class="hover-underline">Contato</a></li>
+        
+        <li><theme-toggle (changeTheme)="switchTheme()" class="toggle"></theme-toggle></li>
+      </ul>
+    </nav>
+  </header>  
 </div>
 
-<!-- Cards com opções [DESCONTINUADO] -->
-  <!-- <div class="options-list">
-    <div class="option-card pessoas">
-      <img src="../assets/logos/team.png" alt="PessoasLogo">
-      <a href="#">CLIENTES</a>
-    </div>
-  
-    <div class="option-card pessoas">
-      <img src="../assets/logos/team.png" alt="PessoasLogo">
-      <a href="#">FORNECEDORES</a>
-    </div>
-  
-    <div class="option-card doces">
-      <img src="../assets/logos/cupcake.png" alt="DocesServiçosLogo">
-      <a href="#">DOCES E SERVIÇOS</a>
-    </div>
+<!-- Seta para baixo -->
+<div class="down-arrow">
 
-    <div class="option-card contratos">
-      <img src="../assets/logos/clipboard.png" alt="ContratosLogo">
-      <a href="#">VENDAS</a>
-    </div>
+</div>
 
-    <div class="option-card contratos">
-      <img src="../assets/logos/clipboard.png" alt="ContratosLogo">
-      <a href="#">AQUISIÇÕES</a>
+<!-- Primeira tela de conteúdo -->
+<div class="two-columns upper-menu" id="doces">
+  <div class="left-column">
+    <div class="text-container">
+      <h5>MENU</h5>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, tenetur.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias est officia temporibus dolores eaque minima impedit eos deserunt quidem assumenda vel, numquam, odit iure nam deleniti illo. Ipsam dolorum voluptatibus quis natus molestiae magnam ut quidem porro neque beatae et, mollitia quod, in eaque omnis assumenda! Inventore impedit doloremque quod?</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p><a href="#" class="menu-link">VER CARDÁPIO</a></p>
     </div>
+  </div>
 
-    <div class="option-card dados">
-      <img src="../assets/logos/pie-chart.png" alt="DadosLogo">
-      <a href="#">DADOS</a>
-    </div>
-  </div> -->
+  <div class="right-column image">
+    <!-- PLACEHOLDER -->
+  </div>
+</div>
 
-  <!-- <li class="dropdown">
-
-    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </li> -->
 

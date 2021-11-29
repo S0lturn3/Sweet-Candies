@@ -1,34 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+
 
 // ----- Definição dos temas ----- //
 .dark-theme{
-    --background-color1: #1f1316;
-    --background-color2: rgba(255, 189, 225, 0.253);
-    --background-image: url("./assets/images/cool-dark-background.png");
-    --text-color: #f5f5f5;
-    --boxtext-color: #f5f5f5;
+    /* Cores/Imagens de Fundo */
+    --background-header1: #0f0d0de1;
+    --background-color1: #0f0d0d;
+    --background-image: url("./assets/images/cool-dark-background.jpg");
     --header-color: #413b3d;
     --button-color: #1d0911;
-
-    --border-color: #ffa8de;
+    
+    /* Gradientes */
     --box-gradient1: #ef5777;
     --box-gradient2: #b71540;
+    
+    /* Bordas */
+    --border-color: #ffa8de;
+    
+    /* Texto */
+    --boxtext-color: #f5f5f5;
+    --text-color: #f5f5f5;
+    --secondary-color: #000000;
+    --title-font-size: 28px;
+    --text-font-size: 16px;
 
+    /* Sombras */
     --shadow-color: #ffadd6;
 }
 .light-theme{
-    --background-color1: #cfe8fc;
-    --background-color2: rgba(31, 67, 78, 0.26);
-    --background-image: url("./assets/images/cool-light-background.png");
-    --text-color: #000000;
-    --boxtext-color: #f5f5f5;
+    /* Cores/Imagens de Fundo */
+    --background-header1: #dee8f0d8;
+    --background-color1: #E0F2FE;
+    --background-image: url("./assets/images/cool-light-background.jpeg");
     --header-color: rgb(245, 251, 255);
     --button-color: rgb(68, 132, 168);
-
-    --border-color: #34e7e4;
+    
+    /* Gradientes */
     --box-gradient1: #0894c7;
     --box-gradient2: #0a639b;
+    
+    /* Bordas */
+    --border-color: #34e7e4;
 
+    /* Texto */
+    --boxtext-color: #000000;
+    --text-color: #000000;
+    --secondary-color: #f5f5f5;
+    --title-font-size: 28px;
+    --text-font-size: 16px;
+    
+    /* Sombras */
     --shadow-color: #001029ab;
 }
 
@@ -36,10 +58,13 @@
 body{
     padding: 0;
     margin: 0;
+    width: 100%;
+    min-height: 1500px;
     /* font-family: 'Kalam', cursive; */
     font-family: 'Quicksand', sans-serif;
     background-image: var(--background-image);
-    background-size: cover;
+    background-size: 100%;
+    background-position: top;
     background-repeat: no-repeat;
     color: var(--text-color);
     position: relative;
@@ -50,50 +75,54 @@ h1, h2, h5, p, a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 700;
+    font-size: var(--title-font-size);
 }
 
-
-/* Cards com opções [DESCONTINUADO] */
-/* .options-list a{
-    color: var(--boxtext-color);
-}
-// ---------- //
-.options-list{
-    width: 100%;
-    margin: 0px 0px;
-    padding: 5px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-evenly;
-}
-
-.option-card{
-    height: 300px;
-    width: 250px;
-    padding: 10px;
-    margin-top: 50px;
-    border: 1px solid var(--border-color);
-    
-    background-image: linear-gradient(
-        to bottom right,
-        var(--border-color) 1%,
-        var(--box-gradient1) 25%,
-        var(--box-gradient2) 60%
-        );
-    
-        border-radius: 10%;
+// --------------- ||| --------------- //
+.upper-menu{
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    margin-top: 100vh;
+    transition: all .4s;
+}
+.left-column{
+    background-color: var(--background-color1);
+    color: var(--text-color);
+    padding-left: 70px;
+    padding-right: 70px;
+    margin: 0;
+    height: 100vh;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    position: relative;
-    transition: all .3s;
 }
-.option-card img{
-    height: 100px;
-    width: 100px;
-    margin: 10px;
+.text-container p{
+    font-size: var(--text-font-size);
+    line-height: 25px;
 }
-.option-card:hover{
-    box-shadow: 0px -65px 1px var(--shadow-color);
-    transform: translate(0px, 65px);
-} */
+.text-container h5{
+    font-family: 'Emilys Candy', cursive;
+    line-height: 20px;
+}
+.menu-link{
+    font-size: var(--text-font-size);
+    width: fit-content;
+    line-height: 45px;
+    padding: 15px;
+    border: 2px solid var(--text-color);
+    transition: all .4s;
+}
+.menu-link:hover{
+    color: var(--secondary-color);
+    background-color: var(--boxtext-color);
+}
+
+// ----- | IMAGE COLUMN | ----- //
+.right-column{
+    background-image: url("./assets/images/red-valvet.jpg");
+    height: 100vh;
+    width: 45%;
+}
