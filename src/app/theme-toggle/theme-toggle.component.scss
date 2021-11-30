@@ -44,13 +44,19 @@
 
 .checkbox:checked + .label .ball{
     transform: translateX(24px);
+    background-color: var(--text-color);
 }
 
 // -- Cores dos ícones -- //
 .fa-moon{
     color: var(--moon-color);
+    z-index: 2;
 }
 .fa-sun{
     color: var(--sun-color);
+    z-index: 2;
 }
-// -------------------------------------------------- //
+
+
+
+

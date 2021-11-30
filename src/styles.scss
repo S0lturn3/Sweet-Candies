@@ -10,14 +10,14 @@
     --background-image: url("./assets/images/cool-dark-background.jpg");
     --header-color: #413b3d;
     --button-color: #1d0911;
-    
+
     /* Gradientes */
     --box-gradient1: #ef5777;
     --box-gradient2: #b71540;
-    
+
     /* Bordas */
     --border-color: #ffa8de;
-    
+
     /* Texto */
     --boxtext-color: #f5f5f5;
     --text-color: #f5f5f5;
@@ -35,11 +35,11 @@
     --background-image: url("./assets/images/cool-light-background.jpeg");
     --header-color: rgb(245, 251, 255);
     --button-color: rgb(68, 132, 168);
-    
+
     /* Gradientes */
     --box-gradient1: #0894c7;
     --box-gradient2: #0a639b;
-    
+
     /* Bordas */
     --border-color: #34e7e4;
 
@@ -49,12 +49,15 @@
     --secondary-color: #f5f5f5;
     --title-font-size: 28px;
     --text-font-size: 16px;
-    
+
     /* Sombras */
     --shadow-color: #001029ab;
 }
 
 // ----- Estilos individuais ----- //
+html{
+  scroll-behavior: smooth;
+}
 body{
     padding: 0;
     margin: 0;
@@ -120,7 +123,6 @@ h1, h2, h5, p, a {
     background-color: var(--boxtext-color);
 }
 
-// ----- | IMAGE COLUMN | ----- //
 .right-column{
     background-image: url("./assets/images/red-valvet.jpg");
     height: 100vh;
