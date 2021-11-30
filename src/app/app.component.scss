@@ -3,13 +3,13 @@
 
 /* ESTILOS DO HEADER */
 .sticky-header{
-  z-index: 2;
-    top: 0;
+    z-index: 2;
     width: 100%;
-    min-height: 64px;
+    top: 0;
+    padding: 0px 25px;
     position: -webkit-sticky;
     position: sticky;
-    display: inline-block;
+    display: inline-flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--background-header1);
@@ -17,22 +17,21 @@
 }
 .title{
     float: left;
-    margin: 10px;
-    font-family: 'Emilys Candy', cursive;
+    // font-family: 'Emilys Candy', cursive;
+    font-family: blackSpartan;
 }
 .list-inline{
     display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     list-style: none;
     float: right;
-    margin: 30px;
-    margin-top: 35px;
     overflow: hidden;
 }
 li a{
-    display: inline-block;
     position: relative;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0px 20px;
     // margin-top: 15px;
     text-decoration: none;
     font-size: var(--text-font-size);

@@ -1,26 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+/* ---------- IMPORTAÇÕES DE ESTILOS ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
 
+/* ---------- FONTES PERSONALIZADAS ---------- */
+@font-face{
+    font-family: cafeFrancoise;
+    src: url("./assets/fonts/cafe-francoise/cafe_francoise_d.otf");
+}
+@font-face{
+    font-family: croissantOne;
+    src: url("./assets/fonts/croissant-one/CroissantOne-Regular.otf");
+}
+@font-face{
+    font-family: blackSpartan;
+    src: url("./assets/fonts/black-spartan-personal-use/black_spartan.ttf");
+}
+
+/* ---------- FIM DAS IMPORTAÇÕES ---------- */
+
+/* ---------- | --------------- | ---------- */
 
 // ----- Definição dos temas ----- //
 .dark-theme{
     /* Cores/Imagens de Fundo */
     --background-header1: #0f0d0de1;
     --background-color1: #0f0d0d;
-    --background-image: url("./assets/images/cool-dark-background.jpg");
+    --background-color2: rgba(241, 211, 220, 0.1);
+    --background-image1: url("./assets/images/cool-dark-background2.jpg");
+    --background-image2: url("./assets/images/chocolate-background.jpg");
+    --background-image3: url("./assets/images/cool-dark-background4.jpg");
     --header-color: #413b3d;
     --button-color: #1d0911;
+
+    --tabs-background1: #2e1b19c9;
+    --tabs-background2: #2c0d04;
 
     /* Gradientes */
     --box-gradient1: #ef5777;
     --box-gradient2: #b71540;
 
     /* Bordas */
-    --border-color: #ffa8de;
+    --border-color: #f8cdc8;
 
     /* Texto */
     --boxtext-color: #f5f5f5;
     --text-color: #f5f5f5;
+    --scroll-arrow-color: rgb(255, 247, 250);
     --secondary-color: #000000;
     --title-font-size: 28px;
     --text-font-size: 16px;
@@ -32,9 +56,15 @@
     /* Cores/Imagens de Fundo */
     --background-header1: #dee8f0d8;
     --background-color1: #E0F2FE;
-    --background-image: url("./assets/images/cool-light-background.jpeg");
+    --background-color2: rgba(211, 240, 241, 0.1);
+    --background-image1: url("./assets/images/cool-dark-background7.jpg");
+    --background-image2: url("./assets/images/red-valvet-background.jpg");
+    --background-image3: url("./assets/images/cool-dark-background5.jpg");
     --header-color: rgb(245, 251, 255);
     --button-color: rgb(68, 132, 168);
+
+    --tabs-background1: #c4f1ffe5;
+    --tabs-background2: #41b3f5;
 
     /* Gradientes */
     --box-gradient1: #0894c7;
@@ -46,6 +76,7 @@
     /* Texto */
     --boxtext-color: #000000;
     --text-color: #000000;
+    --scroll-arrow-color: rgb(255, 247, 250);
     --secondary-color: #f5f5f5;
     --title-font-size: 28px;
     --text-font-size: 16px;
@@ -56,17 +87,18 @@
 
 // ----- Estilos individuais ----- //
 html{
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 body{
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
     width: 100%;
-    min-height: 1500px;
+    min-height: 100vh;
     /* font-family: 'Kalam', cursive; */
     font-family: 'Quicksand', sans-serif;
-    background-image: var(--background-image);
-    background-size: 100%;
+    background-image: var(--background-image1);
+    background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
     color: var(--text-color);
@@ -81,13 +113,75 @@ h1, h2, h5, p, a {
     font-size: var(--title-font-size);
 }
 
-// --------------- ||| --------------- //
+/* --------------- ||| --------------- */
+.home-screen{
+    height: 75vh;
+    padding: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.down-arrow{
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: var(--background-color2);
+    color: var(--scroll-arrow-color);
+}
+.ripple-loader div{
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    animation: ripple-loader 2s ease-out infinite;
+}
+@keyframes ripple-loader{
+    0%{
+        top: 75;
+        left: 75;
+        width: 190px;
+        height: 190px;
+        opacity: 1;
+    }
+    100%{
+        top: -75;
+        left: -75;
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+/* ----- Animação da seta para baixo ----- */
+.fa-chevrondown{
+    margin-bottom: 10px;
+    color: var(--scroll-arrow-color);
+    display: block;
+    animation: bounce 2s ease infinite;
+}
+@keyframes bounce{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/* --------------- ||| --------------- */
 .upper-menu{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 100vh;
-    transition: all .4s;
 }
 .left-column{
     background-color: var(--background-color1);
@@ -101,14 +195,18 @@ h1, h2, h5, p, a {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    transition: all .4s;
 }
 
 .text-container p{
     font-size: var(--text-font-size);
     line-height: 25px;
 }
+
 .text-container h5{
-    font-family: 'Emilys Candy', cursive;
+    /*font-family: 'Emilys Candy', cursive; */
+    font-family: blackSpartan;
+    font-size: 30px;
     line-height: 20px;
 }
 .menu-link{
@@ -125,7 +223,62 @@ h1, h2, h5, p, a {
 }
 
 .right-column{
-    background-image: url("./assets/images/red-valvet.jpg");
+    background-image: var(--background-image2);
     height: 100vh;
     width: 45%;
+    transition: all .4s;
 }
+
+/* --------------- ||| --------------- */
+.menu-list{
+    min-height: 100vh;
+    background-image: var(--background-image3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s;
+}
+.middle-column{
+    background-color: var(--background-color1);
+    height: 100vh;
+    width: 65%;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+}
+.tabs span{
+    font-family: blackSpartan;
+    font-size: 30px;
+}
+.tab{
+    overflow: hidden;
+    width: fit-content;
+    margin-top: 50px;
+    border: 1px solid var(--border-color);
+    background-color: var(--tabs-background1);
+}
+.tab button{
+    background-color: inherit;
+    color: var(--text-color);
+    display: inline-flex;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: all .4s;
+}
+.tab button:hover{
+    background-color: var(--tabs-background2);
+}
+.tab button.active{
+    background-color: var(--tabs-background2);
+}
+
+.tabcontent{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+

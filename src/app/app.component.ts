@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 import { inject } from '@angular/core/testing';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,8 @@ import { inject } from '@angular/core/testing';
 export class AppComponent implements OnInit{
   title = 'Sweet Candies';
   theme: Theme = 'dark-theme';
+
+  downArrowICO = faChevronDown;
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
