@@ -1,76 +1,129 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+
 
 // ----- Definição dos temas ----- //
 .dark-theme{
-    --background-color: #1a1a1a;
+    /* Cores/Imagens de Fundo */
+    --background-header1: #0f0d0de1;
+    --background-color1: #0f0d0d;
+    --background-image: url("./assets/images/cool-dark-background.jpg");
+    --header-color: #413b3d;
+    --button-color: #1d0911;
+    
+    /* Gradientes */
+    --box-gradient1: #ef5777;
+    --box-gradient2: #b71540;
+    
+    /* Bordas */
+    --border-color: #ffa8de;
+    
+    /* Texto */
+    --boxtext-color: #f5f5f5;
     --text-color: #f5f5f5;
-    --header-color: #2b2b2b;
-    --button-color: #1a1a1a;
-    --border-color: #de8cff;
-    --box-color: #e00096;
+    --secondary-color: #000000;
+    --title-font-size: 28px;
+    --text-font-size: 16px;
 
-    --shadow-color: #ffa1e1;
+    /* Sombras */
+    --shadow-color: #ffadd6;
 }
 .light-theme{
-    --background-color: #f5f5f5;
-    --text-color: #1a1a1a;
-    --header-color: #fff;
-    --button-color: #fff;
-    --border-color: rgb(231, 255, 174);
-    --box-color: #9fca6b;
+    /* Cores/Imagens de Fundo */
+    --background-header1: #dee8f0d8;
+    --background-color1: #E0F2FE;
+    --background-image: url("./assets/images/cool-light-background.jpeg");
+    --header-color: rgb(245, 251, 255);
+    --button-color: rgb(68, 132, 168);
+    
+    /* Gradientes */
+    --box-gradient1: #0894c7;
+    --box-gradient2: #0a639b;
+    
+    /* Bordas */
+    --border-color: #34e7e4;
 
-    --shadow-color: #172b00;
+    /* Texto */
+    --boxtext-color: #000000;
+    --text-color: #000000;
+    --secondary-color: #f5f5f5;
+    --title-font-size: 28px;
+    --text-font-size: 16px;
+    
+    /* Sombras */
+    --shadow-color: #001029ab;
 }
 
 // ----- Estilos individuais ----- //
 body{
     padding: 0;
     margin: 0;
-    font-family: 'Kalam', cursive;
-    background-color: var(--background-color);
+    width: 100%;
+    min-height: 1500px;
+    /* font-family: 'Kalam', cursive; */
+    font-family: 'Quicksand', sans-serif;
+    background-image: var(--background-image);
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
     color: var(--text-color);
     position: relative;
-    transition: all .5s ease-in-out;
+    transition: all .5s;
 }
 
-h1, h2, h5, p {
+h1, h2, h5, p, a {
     color: var(--text-color);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: var(--title-font-size);
 }
-// ---------- //
-.options-list{
-    margin: 50px 1px;
-    padding: 5px;
+
+// --------------- ||| --------------- //
+.upper-menu{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 100vh;
+    transition: all .4s;
 }
-
-.option{
-    height: 300px;
-    width: 250px;
-    border: 2px solid var(--border-color);
-    background-color: var(--box-color);
-    border-radius: 10%;
+.left-column{
+    background-color: var(--background-color1);
+    color: var(--text-color);
+    padding-left: 70px;
+    padding-right: 70px;
+    margin: 0;
+    height: 100vh;
+    width: 55%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    position: relative;
-    transition: all .3s ease-out;
 }
 
-.option:hover{
-    transform: translate(-20px,-20px) rotate(-2deg) scale(1.1, 1.1);
+.text-container p{
+    font-size: var(--text-font-size);
+    line-height: 25px;
+}
+.text-container h5{
+    font-family: 'Emilys Candy', cursive;
+    line-height: 20px;
+}
+.menu-link{
+    font-size: var(--text-font-size);
+    width: fit-content;
+    line-height: 45px;
+    padding: 15px;
+    border: 2px solid var(--text-color);
+    transition: all .4s;
+}
+.menu-link:hover{
+    color: var(--secondary-color);
+    background-color: var(--boxtext-color);
 }
 
-.shadow{
-    position: absolute;
-    width: inherit;
-    height: inherit;
-
-    transition: all .3s ease-out;
-}
-
-.shadow:hover{
-    box-shadow: 9px 12px 1px var(--shadow-color);
-    transform: translate(-10px,-10px) rotate(4deg);
+// ----- | IMAGE COLUMN | ----- //
+.right-column{
+    background-image: url("./assets/images/red-valvet.jpg");
+    height: 100vh;
+    width: 45%;
 }

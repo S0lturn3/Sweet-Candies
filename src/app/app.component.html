@@ -1,46 +1,45 @@
-<div>
+<div class="sticky-header">
   <header>
-    <div class="logo-container">
-      <img src="../assets/logos/bakery.png" alt="Bakery Logo">
-      <h2>{{ title }}</h2>
-    </div>
-
     <nav>
-      <ul>
+      <div class="title">
+        <h2>{{ title }}</h2>
+      </div>
+
+      <ul class="list-inline">
+        <li><a href="#" class="hover-underline">Pessoas</a></li>
+        
+        <li><a href="#doces" class="hover-underline">Menu</a></li>
+        
+        <li><a href="#" class="hover-underline">Transações</a></li>
+        
+        <li><a href="#" class="hover-underline">Contato</a></li>
+        
         <li><theme-toggle (changeTheme)="switchTheme()" class="toggle"></theme-toggle></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Home</a></li>
       </ul>
     </nav>
-  </header>
+  </header>  
+</div>
 
-  <div class="options-list">
-    <div class="option pessoas">
-      CLIENTES
-    </div>
-  
-    <div class="option pessoas">
-      FORNECEDORES
-    </div>
-  
-    <div class="option doces">
-      DOCES E SERVIÇOS
-    </div>
+<!-- Seta para baixo -->
+<div class="down-arrow">
 
-    <div class="option contratos">
-      VENDAS
-    </div>
+</div>
 
-    <div class="option contratos">
-      AQUISIÇÕES
-    </div>
-
-    <div class="option dados">
-      DADOS
-      <div class="shadow">
-        
-      </div>
+<!-- Primeira tela de conteúdo -->
+<div class="two-columns upper-menu" id="doces">
+  <div class="left-column">
+    <div class="text-container">
+      <h5>MENU</h5>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, tenetur.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias est officia temporibus dolores eaque minima impedit eos deserunt quidem assumenda vel, numquam, odit iure nam deleniti illo. Ipsam dolorum voluptatibus quis natus molestiae magnam ut quidem porro neque beatae et, mollitia quod, in eaque omnis assumenda! Inventore impedit doloremque quod?</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p><a href="#" class="menu-link">VER CARDÁPIO</a></p>
     </div>
   </div>
+
+  <div class="right-column image">
+    <!-- PLACEHOLDER -->
+  </div>
 </div>
+
+

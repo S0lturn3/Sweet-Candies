@@ -1,59 +1,62 @@
 @import url("../styles.scss");
 
+
 /* ESTILOS DO HEADER */
-header{
-    height: 20px;
-    padding: 30px 10%;
-    display: flex;
+.sticky-header{
+    top: 0;
+    width: 100%;
+    min-height: 64px;
+    position: -webkit-sticky;
+    position: sticky;
+    display: inline-block;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--background-header1);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-header .logo-container{
-    display: inline-flex;
+.title{
     float: left;
+    margin: 10px;
+    font-family: 'Emilys Candy', cursive;
 }
-.logo-container img{
-    width: 70px;
-    height: 70px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 5px;
-    cursor: pointer;
-}
-.logo-container h2{
-    margin-top: 27px;
-    color: var(--text-color);
-}
-
-
-
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.list-inline{
+    display: inline-flex;
+    list-style: none;
+    float: right;
+    margin: 30px;
+    margin-top: 35px;
     overflow: hidden;
 }
-li{
-    float: right;
-}
 li a{
-    display: block;
-    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
     margin-right: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    // margin-top: 15px;
     text-decoration: none;
-    color: var(--text-color);
-    font-size: 20px;
-    transition: .5s;
+    font-size: var(--text-font-size);
+    transition: .3s;
 }
-li a:hover{
-    transform: scale(1.3, 1.3);
-}
-li:first-child{
-    margin-top: 30px;
+li:last-child{
+    // margin-top: 15px;
     margin-left: 60px;
 }
 // -------------------------------------------------- //
-
+// ----- UNDERLINE ----- //
+.hover-underline::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    // margin-bottom: 10px;
+    background-color: var(--text-color);
+    transform-origin: bottom left;
+    transition: transform .4s ease-out;
+}
+.hover-underline:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

@@ -8,7 +8,7 @@ import { inject } from '@angular/core/testing';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  title = 'Sweet Candies | Bakery';
+  title = 'Sweet Candies';
   theme: Theme = 'dark-theme';
 
   constructor(
