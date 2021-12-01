@@ -24,12 +24,14 @@
     /* Cores/Imagens de Fundo */
     --background-header1: #0f0d0de1;
     --background-color1: #0f0d0d;
-    --background-color2: rgba(241, 211, 220, 0.1);
     --background-image1: url("./assets/images/cool-dark-background2.jpg");
     --background-image2: url("./assets/images/chocolate-background.jpg");
     --background-image3: url("./assets/images/cool-dark-background4.jpg");
     --header-color: #413b3d;
     --button-color: #1d0911;
+
+    --background-arrow1: rgba(241, 211, 220, 0.1);
+    --background-arrow2: rgba(241, 211, 220, 0.2);
 
     --tabs-background1: #2e1b19c9;
     --tabs-background2: #2c0d04;
@@ -50,18 +52,21 @@
     --text-font-size: 16px;
 
     /* Sombras */
-    --shadow-color: #ffadd6;
+    --shadow-color1: #ffadd6;
+    --shadow-color2: #cc756e80;
 }
 .light-theme{
     /* Cores/Imagens de Fundo */
     --background-header1: #dee8f0d8;
     --background-color1: #E0F2FE;
-    --background-color2: rgba(211, 240, 241, 0.1);
     --background-image1: url("./assets/images/cool-dark-background7.jpg");
     --background-image2: url("./assets/images/red-valvet-background.jpg");
     --background-image3: url("./assets/images/cool-dark-background5.jpg");
     --header-color: rgb(245, 251, 255);
     --button-color: rgb(68, 132, 168);
+
+    --background-arrow1: rgba(211, 240, 241, 0.1);
+    --background-arrow2: rgba(211, 240, 241, 0.2);
 
     --tabs-background1: #c4f1ffe5;
     --tabs-background2: #41b3f5;
@@ -82,7 +87,8 @@
     --text-font-size: 16px;
 
     /* Sombras */
-    --shadow-color: #001029ab;
+    --shadow-color1: #001029ab;
+    --shadow-color2: #0026295d;
 }
 
 // ----- Estilos individuais ----- //
@@ -122,8 +128,8 @@ h1, h2, h5, p, a {
     justify-content: space-around;
 }
 .down-arrow{
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     padding: 20px;
     position: relative;
     display: flex;
@@ -132,8 +138,12 @@ h1, h2, h5, p, a {
     justify-content: space-evenly;
     border: 2px solid #fff;
     border-radius: 50%;
-    background-color: var(--background-color2);
+    background-color: var(--background-arrow1);
     color: var(--scroll-arrow-color);
+    transition: all .5s;
+}
+.down-arrow:hover{
+    background-color: var(--background-arrow2);
 }
 .ripple-loader div{
     position: absolute;
@@ -145,8 +155,8 @@ h1, h2, h5, p, a {
     0%{
         top: 75;
         left: 75;
-        width: 190px;
-        height: 190px;
+        width: 120px;
+        height: 120px;
         opacity: 1;
     }
     100%{
@@ -178,16 +188,17 @@ h1, h2, h5, p, a {
 }
 
 /* --------------- ||| --------------- */
-.upper-menu{
+#sobre{
+    background-color: var(--background-color1);
+    height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    transition: all .5s;
 }
 .left-column{
-    background-color: var(--background-color1);
     color: var(--text-color);
-    padding-left: 70px;
-    padding-right: 70px;
     margin: 0;
     height: 100vh;
     width: 55%;
@@ -196,6 +207,10 @@ h1, h2, h5, p, a {
     align-items: flex-start;
     justify-content: center;
     transition: all .4s;
+}
+.text-container{
+    padding-right: 20%;
+    padding-left: 20%;
 }
 
 .text-container p{
@@ -223,62 +238,109 @@ h1, h2, h5, p, a {
 }
 
 .right-column{
-    background-image: var(--background-image2);
-    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     width: 45%;
     transition: all .4s;
 }
+.inner-right-column .image1{
+    width: 90%;
+    height: 90%;
+    transition: all .4s;
+    border-radius: 25%;
+    box-shadow: -70px 80px 0px 10px var(--shadow-color2);
+}
 
 /* --------------- ||| --------------- */
-.menu-list{
+#menu{
+    background-color: var(--background-color1);
     min-height: 100vh;
-    background-image: var(--background-image3);
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all .4s;
 }
-.middle-column{
-    background-color: var(--background-color1);
-    height: 100vh;
-    width: 65%;
-    padding: 100px;
+.inner-menu{
+    width: 85%;
+    height: 80%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    color: var(--text-color);
+    transition: all .5s;
 }
-.tabs span{
-    font-family: blackSpartan;
+.inner-menu .list-rows1{
+    /* border: 1px solid grey; */
+    width: 100%;
+    height: 80%;
+}
+.inner-menu h5{
     font-size: 30px;
 }
-.tab{
-    overflow: hidden;
-    width: fit-content;
-    margin-top: 50px;
-    border: 1px solid var(--border-color);
-    background-color: var(--tabs-background1);
+.list-rows1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.tab button{
-    background-color: inherit;
+.list-rows1 > .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+}
+.list-rows1 > .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid var(--border-color); */
+    margin: 5px;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+.card .image-container{
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+.image-container img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.card .info-text{
+    width: 70%;
+    float: right;
+    transition: all .5s;
+}
+.info-text p{
+    font-size: var(--text-font-size);
     color: var(--text-color);
-    display: inline-flex;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
+    line-height: 25px;
     transition: all .4s;
 }
-.tab button:hover{
-    background-color: var(--tabs-background2);
-}
-.tab button.active{
-    background-color: var(--tabs-background2);
+.info-text h5{
+    color: var(--text-color);
+    line-height: 5px;
+    transition: all .4s;
 }
 
-.tabcontent{
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
+
+/* --------------- ||| --------------- */
+
 

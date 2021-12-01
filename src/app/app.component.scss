@@ -6,7 +6,6 @@
     z-index: 2;
     width: 100%;
     top: 0;
-    padding: 0px 25px;
     position: -webkit-sticky;
     position: sticky;
     display: inline-flex;
@@ -19,8 +18,10 @@
     float: left;
     // font-family: 'Emilys Candy', cursive;
     font-family: blackSpartan;
+    margin-left: 25px;
 }
 .list-inline{
+    margin-right: 25px;
     display: inline-flex;
     flex-direction: row;
     align-items: center;

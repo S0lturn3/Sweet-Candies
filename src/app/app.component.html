@@ -4,15 +4,17 @@
   </div>
   <div>
     <ul class="list-inline">
-      <li><a href="#" class="hover-underline">Pessoas</a></li>
+      <li><a href="#sobre" class="hover-underline">Sobre nós</a></li>
 
-      <li><a href="#doces1" class="hover-underline">Menu</a></li>
+      <!-- <li><a href="#" class="hover-underline">Transações</a></li> -->
 
-      <li><a href="#" class="hover-underline">Transações</a></li>
+      <li><a href="#menu" class="hover-underline">Menu</a></li>
+      
+      <li><a href="#" class="hover-underline">Faça sua reserva</a></li>
 
-      <li><a href="#" class="hover-underline">Contato</a></li>
-
-      <li><theme-toggle (changeTheme)="switchTheme()" class="toggle"></theme-toggle></li>
+      <li><theme-toggle (changeTheme)="switchTheme()"
+         (click)="onThemeChange()"
+         class="toggle"></theme-toggle></li>
     </ul>
   </div>
 </div>
@@ -21,67 +23,113 @@
 <div class="home-screen scroll">
   <span class="down-arrow ripple-loader">
     <div></div>
-    <span class="scroll-text">SCROLL DOWN</span>
-      <a href="#doces1" class="fa-chevrondown">
+    <!-- <span class="scroll-text">SCROLL DOWN</span> -->
+      <a href="#sobre" class="fa-chevrondown">
         <fa-icon [icon]="downArrowICO" class="fas fa-chevrondown icon-colors"></fa-icon>
       </a>
   </span>
 </div>
 
-<!-- Primeira tela de conteúdo -->
-<div class="upper-menu content1" id="doces1">
+<!-- Seção de "Sobre nós (About)" -->
+<section class="about content" id="sobre">
   <div class="left-column">
-    <div class="text-container" data-aos="fade-up">
-      <h5>MENU</h5>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, tenetur.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias est officia temporibus dolores eaque minima impedit eos deserunt quidem assumenda vel, numquam, odit iure nam deleniti illo. Ipsam dolorum voluptatibus quis natus molestiae magnam ut quidem porro neque beatae et, mollitia quod, in eaque omnis assumenda! Inventore impedit doloremque quod?</p>
-      <p>Lorem ipsum dolor sit amet.</p>
-      <p><a href="#cardapio" class="menu-link">VER CARDÁPIO</a></p>
+    <!-- <div class="box-shadow1"></div> -->
+    <div class="text-container">
+      <h5 data-aos="fade-up" data-aos-delay="100">SOBRE NÓS</h5>
+      <p data-aos="fade-up" data-aos-delay="250">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, tenetur.</p>
+      <p data-aos="fade-up" data-aos-delay="250">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias est officia temporibus dolores eaque minima impedit eos deserunt quidem assumenda vel, numquam, odit iure nam deleniti illo. Ipsam dolorum voluptatibus quis natus molestiae magnam ut quidem porro neque beatae et, mollitia quod, in eaque omnis assumenda! Inventore impedit doloremque quod?</p>
+      <p data-aos="fade-up" data-aos-delay="250">Lorem ipsum dolor sit amet.</p>
+      <p data-aos="fade-up" data-aos-delay="600"><a href="#menu" class="menu-link">VER MENU</a></p>
     </div>
   </div>
 
-  <div class="right-column image" data-aos="fade-down">
-    <!-- PLACEHOLDER -->
+  <div class="right-column">
+    <div class="inner-right-column" data-aos="zoom-out">
+      <img class="image1" [src]="dynamicPath">
+    </div>
   </div>
-</div>
+</section>
 
-<!-- Segunda tela de conteúdo: Lista de produtos e eventos oferecidos -->
-<div id="cardapio" class="menu-list content2">
-  <div class="first-column">
-    <!-- PLACEHOLDER -->
-  </div>
 
-  <div class="middle-column" data-aos="flip-up">
-    <div class="tabs">
-      <span>C A R D Á P I O</span>
-      <!-- Tab links -->
-      <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Doces')">Doces</button>
-        <button class="tablinks" onclick="openTab(event, 'Eventos')">Eventos</button>
-        <button class="tablinks" onclick="openTab(event, 'Ingredientes')">Ingredientes</button>
+<!-- Seção dos doces (Menu) -->
+<section id="menu" class="menu content">
+  <div class="inner-menu">
+    <h5 class="title">MENU</h5>
+    <div class="list-rows1">
+      <div class="left">
+
+        <div class="card" data-aos="zoom-out-up" data-aos-delay="100">
+          <div class="image-container">
+            <img src="../assets/images/cupcake-chocolate.jpg" alt="imagem-prato">
+          </div>
+          <div class="info-text">
+            <h5>Nome</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio facere rerum blanditiis fugiat fuga voluptatem mollitia, veniam harum numquam veritatis!</p>
+            <p>Valor:</p>
+          </div>
+        </div>
+
+        <div class="card" data-aos="zoom-out-up" data-aos-delay="250">
+          <div class="image-container">
+            <img src="../assets/images/xsingle_food_1.png.pagespeed.ic.BEzTNKCjrm.png" alt="imagem-prato">
+          </div>
+          <div class="info-text">
+            <h5>Título</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio facere rerum blanditiis fugiat fuga voluptatem mollitia, veniam harum numquam veritatis!</p>
+            <p>Valor:</p>
+          </div>
+        </div>
+
+        <div class="card" data-aos="zoom-out-up" data-aos-delay="500">
+          <div class="image-container">
+            <img src="../assets/images/brigadeiro.jpg" alt="imagem-prato">
+          </div>
+          <div class="info-text">
+            <h5>Título</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio facere rerum blanditiis fugiat fuga voluptatem mollitia, veniam harum numquam veritatis!</p>
+            <p>Valor:</p>
+          </div>
+        </div>
+
       </div>
-  
-      <!-- Tab content -->
-      <div class="tabcontent">
-        <div id="Doces" class="tabcontent">
-          <h3>TESTE</h3>
-          <p>TESTE</p>
+
+      <div class="right">
+
+        <div class="card" data-aos="zoom-out-up" data-aos-delay="100">
+          <div class="image-container">
+            <img src="../assets/images/brigadeiro.jpg" alt="imagem-prato">
+          </div>
+          <div class="info-text">
+            <h5>Título</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio facere rerum blanditiis fugiat fuga voluptatem mollitia, veniam harum numquam veritatis!</p>
+            <p>Valor:</p>
+          </div>
         </div>
-  
-        <div id="Eventos" class="tabcontent">
-          <h3>TESTE 2</h3>
-          <p>TESTE 2</p>
+
+        <div class="card" data-aos="zoom-out-up" data-aos-delay="250">
+          <div class="image-container">
+            <img src="../assets/images/brigadeiro.jpg" alt="imagem-prato">
+          </div>
+          <div class="info-text">
+            <h5>Título</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio facere rerum blanditiis fugiat fuga voluptatem mollitia, veniam harum numquam veritatis!</p>
+            <p>Valor:</p>
+          </div>
         </div>
-  
-        <div id="Ingredientes" class="tabcontent">
-          <h3>TESTE 3</h3>
-          <p>TESTE 3</p>
+
+        <div class="card" data-aos="zoom-out-up" data-aos-delay="500">
+          <div class="image-container">
+            <img src="../assets/images/brigadeiro.jpg" alt="imagem-prato">
+          </div>
+          <div class="info-text">
+            <h5>Título</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio facere rerum blanditiis fugiat fuga voluptatem mollitia, veniam harum numquam veritatis!</p>
+            <p>Valor:</p>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
+</section>
 
-  <div class="third-column">
-    <!-- PLACEHOLDER -->
-  </div>
-</div>

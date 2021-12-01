@@ -12,17 +12,28 @@ export class AppComponent implements OnInit{
   title = 'Sweet Candies';
   theme: Theme = 'dark-theme';
 
-  downArrowICO = faChevronDown;
+  dynamicPath: any = 'chocolate-background.jpg';
 
+  onThemeChange(){
+    if (this.theme == 'dark-theme') {
+      this.dynamicPath = 'chocolate-background.jpg';
+    } else{
+      this.dynamicPath = 'red-valvet-background.jpg';
+    }
+  }
+
+  
+  downArrowICO = faChevronDown;
+  
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2
-  ) { }
-
-  ngOnInit() {
-    this.initializeTheme();
-  }
-
+    ) { }
+    
+    ngOnInit() {
+      this.initializeTheme();
+    }
+    
   switchTheme(){
     this.document.body.classList.replace(
       this.theme,
