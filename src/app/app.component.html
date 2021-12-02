@@ -6,11 +6,9 @@
     <ul class="list-inline">
       <li><a href="#sobre" class="hover-underline">Sobre nós</a></li>
 
-      <!-- <li><a href="#" class="hover-underline">Transações</a></li> -->
-
       <li><a href="#menu" class="hover-underline">Menu</a></li>
       
-      <li><a href="#" class="hover-underline">Faça sua reserva</a></li>
+      <li><a href="#reserva" class="hover-underline">Faça sua reserva</a></li>
 
       <li><theme-toggle (changeTheme)="switchTheme()"
          (click)="onThemeChange()"
@@ -31,7 +29,7 @@
 </div>
 
 <!-- Seção de "Sobre nós (About)" -->
-<section class="about content" id="sobre">
+<section id="sobre" class="about content">
   <div class="left-column">
     <!-- <div class="box-shadow1"></div> -->
     <div class="text-container">
@@ -44,7 +42,7 @@
   </div>
 
   <div class="right-column">
-    <div class="inner-right-column" data-aos="zoom-out">
+    <div class="inner-right-column" data-aos="zoom-in-up">
       <img class="image1" [src]="dynamicPath">
     </div>
   </div>
@@ -53,41 +51,45 @@
 
 <!-- Seção dos doces (Menu) -->
 <section id="menu" class="menu content">
-  <div class="inner-menu">
+  <!-- <div class="inner-menu">
     <h5 class="title">MENU</h5>
     <div class="list-rows1">
       <div class="left">
 
-        <div class="card" data-aos="zoom-out-up" data-aos-delay="100">
+        <div class="card" data-aos="zoom-out-up" data-aos-delay="150" data-aos-anchor-placement="bottom-bottom">
           <div class="image-container">
             <img src="../assets/images/cupcake-chocolate.jpg" alt="imagem-prato">
           </div>
           <div class="info-text">
             <h5>Nome</h5>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio facere rerum blanditiis fugiat fuga voluptatem mollitia, veniam harum numquam veritatis!</p>
-            <p>Valor:</p>
+            <p>Valor: R$9,99</p>
           </div>
         </div>
 
-        <div class="card" data-aos="zoom-out-up" data-aos-delay="250">
+        <hr style="width: 100%;">
+
+        <div class="card" data-aos="zoom-out-up" data-aos-delay="250" data-aos-anchor-placement="bottom-bottom">
           <div class="image-container">
             <img src="../assets/images/xsingle_food_1.png.pagespeed.ic.BEzTNKCjrm.png" alt="imagem-prato">
           </div>
           <div class="info-text">
-            <h5>Título</h5>
+            <h5>Nome</h5>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio facere rerum blanditiis fugiat fuga voluptatem mollitia, veniam harum numquam veritatis!</p>
-            <p>Valor:</p>
+            <p>Valor: R$9,99</p>
           </div>
         </div>
 
-        <div class="card" data-aos="zoom-out-up" data-aos-delay="500">
+        <hr style="width: 100%;">
+
+        <div class="card" data-aos="zoom-out-up" data-aos-delay="300" data-aos-anchor-placement="bottom-bottom">
           <div class="image-container">
             <img src="../assets/images/brigadeiro.jpg" alt="imagem-prato">
           </div>
           <div class="info-text">
-            <h5>Título</h5>
+            <h5>Nome</h5>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio facere rerum blanditiis fugiat fuga voluptatem mollitia, veniam harum numquam veritatis!</p>
-            <p>Valor:</p>
+            <p>Valor: R$9,99</p>
           </div>
         </div>
 
@@ -95,40 +97,91 @@
 
       <div class="right">
 
-        <div class="card" data-aos="zoom-out-up" data-aos-delay="100">
+        <div class="card" data-aos="zoom-out-up" data-aos-delay="150" data-aos-anchor-placement="bottom-bottom">
           <div class="image-container">
             <img src="../assets/images/brigadeiro.jpg" alt="imagem-prato">
           </div>
           <div class="info-text">
-            <h5>Título</h5>
+            <h5>Nome</h5>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio facere rerum blanditiis fugiat fuga voluptatem mollitia, veniam harum numquam veritatis!</p>
-            <p>Valor:</p>
+            <p>Valor: R$9,99</p>
           </div>
         </div>
 
-        <div class="card" data-aos="zoom-out-up" data-aos-delay="250">
+        <hr style="width: 100%;">
+
+        <div class="card" data-aos="zoom-out-up" data-aos-delay="250" data-aos-anchor-placement="bottom-bottom">
           <div class="image-container">
             <img src="../assets/images/brigadeiro.jpg" alt="imagem-prato">
           </div>
           <div class="info-text">
-            <h5>Título</h5>
+            <h5>Nome</h5>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio facere rerum blanditiis fugiat fuga voluptatem mollitia, veniam harum numquam veritatis!</p>
-            <p>Valor:</p>
+            <p>Valor: R$9,99</p>
           </div>
         </div>
 
-        <div class="card" data-aos="zoom-out-up" data-aos-delay="500">
+        <hr style="width: 100%;">
+
+        <div class="card" data-aos="zoom-out-up" data-aos-delay="300" data-aos-anchor-placement="bottom-bottom">
           <div class="image-container">
             <img src="../assets/images/brigadeiro.jpg" alt="imagem-prato">
           </div>
           <div class="info-text">
-            <h5>Título</h5>
+            <h5>Nome</h5>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio facere rerum blanditiis fugiat fuga voluptatem mollitia, veniam harum numquam veritatis!</p>
-            <p>Valor:</p>
+            <p>Valor: R$9,99</p>
           </div>
         </div>
 
       </div>
+    </div>
+  </div> -->
+
+  <div class="card-deck">
+    <div class="card">
+      <img src="" alt="Card image cap" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Nome</h5>
+        <p class="card-text"></p>
+        <p class="card-text">Valor: <b>R$ 9,99</b></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="" alt="Card image cap" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Nome</h5>
+        <p class="card-text"></p>
+        <p class="card-text">Valor: <b>R$ 9,99</b></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="" alt="Card image cap" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Nome</h5>
+        <p class="card-text"></p>
+        <p class="card-text">Valor: <b>R$ 9,99</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Seção de Reserva (Book a Table) -->
+<section id="reserva" class="book-table">
+  <div class="inner-container">
+    <div class="image-container1">  <!-- Imagem de fundo ao lado esquerdo da tela -->
+      <img src="" alt="Imagem">
+    </div>
+
+    <div class="form-container">  <!-- Form de cadastro de informações -->
+      <form action="" class="form-book">
+        <div class="form-group">
+
+        </div>
+      </form>
     </div>
   </div>
 </section>

@@ -1,6 +1,7 @@
 /* ---------- IMPORTAÇÕES DE ESTILOS ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
 
+
 /* ---------- FONTES PERSONALIZADAS ---------- */
 @font-face{
     font-family: cafeFrancoise;
@@ -92,15 +93,18 @@
 }
 
 // ----- Estilos individuais ----- //
-html{
-    scroll-behavior: smooth;
-}
-body{
-    box-sizing: border-box;
+*{
     padding: 0;
     margin: 0;
+}
+html{
+    scroll-behavior: smooth;
     width: 100%;
-    min-height: 100vh;
+}
+body{
+    width: 100%;
+    max-width: 100%;
+    min-height: 110vh;
     /* font-family: 'Kalam', cursive; */
     font-family: 'Quicksand', sans-serif;
     background-image: var(--background-image1);
@@ -121,7 +125,7 @@ h1, h2, h5, p, a {
 
 /* --------------- ||| --------------- */
 .home-screen{
-    height: 75vh;
+    height: 100vh;
     padding: 100px;
     display: flex;
     align-items: flex-end;
@@ -263,84 +267,15 @@ h1, h2, h5, p, a {
     align-items: center;
     justify-content: center;
 }
-.inner-menu{
-    width: 85%;
-    height: 80%;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+
+/* --------------- ||| --------------- */
+#reserva{
+    background-color: var(--background-color1);
+    min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all .5s;
 }
-.inner-menu .list-rows1{
-    /* border: 1px solid grey; */
-    width: 100%;
-    height: 80%;
-}
-.inner-menu h5{
-    font-size: 30px;
-}
-.list-rows1{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.list-rows1 > .left{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 50%;
-    height: 100%;
-}
-.list-rows1 > .right{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 50%;
-    height: 100%;
-}
-.card{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    /* border: 1px solid var(--border-color); */
-    margin: 5px;
-    box-sizing: border-box;
-    transition: all .5s;
-}
-.card .image-container{
-    width: 25%;
-    height: 100%;
-    float: left;
-}
-.image-container img{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-.card .info-text{
-    width: 70%;
-    float: right;
-    transition: all .5s;
-}
-.info-text p{
-    font-size: var(--text-font-size);
-    color: var(--text-color);
-    line-height: 25px;
-    transition: all .4s;
-}
-.info-text h5{
-    color: var(--text-color);
-    line-height: 5px;
-    transition: all .4s;
-}
-
-
-/* --------------- ||| --------------- */
-
 

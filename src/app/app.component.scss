@@ -4,6 +4,7 @@
 /* ESTILOS DO HEADER */
 .sticky-header{
     z-index: 2;
+    height: 64px;
     width: 100%;
     top: 0;
     position: -webkit-sticky;
@@ -16,11 +17,13 @@
 }
 .title{
     float: left;
+    margin-top: 15px;
     // font-family: 'Emilys Candy', cursive;
     font-family: blackSpartan;
     margin-left: 25px;
 }
 .list-inline{
+    margin-top: 15px;
     margin-right: 25px;
     display: inline-flex;
     flex-direction: row;
@@ -39,7 +42,7 @@ li a{
     transition: .3s;
 }
 li:last-child{
-    // margin-top: 15px;
+    margin-top: 10px;
     margin-left: 60px;
 }
 // -------------------------------------------------- //
@@ -61,3 +64,4 @@ li:last-child{
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
