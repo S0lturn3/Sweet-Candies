@@ -1,0 +1,181 @@
+<div class="sticky-header">
+  <div class="title">
+    <a href="#">
+      <h2>{{ title }}</h2>
+    </a>
+  </div>
+  <div>
+    <ul class="list-inline">
+      <li><a href="#sobre" class="hover-underline">Sobre nós</a></li>
+
+      <li><a href="#menu" class="hover-underline">Menu</a></li>
+
+      <li><a href="#reserva" class="hover-underline">Faça sua reserva</a></li>
+
+      <li>
+        <theme-toggle (changeTheme)="switchTheme()" (click)="onThemeChange()" class="toggle"></theme-toggle>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Seta para baixo -->
+<div class="home-screen scroll">
+  <span class="down-arrow ripple-loader">
+    <div></div>
+    <!-- <span class="scroll-text">SCROLL DOWN</span> -->
+    <a href="#sobre" class="fa-chevrondown">
+      <fa-icon [icon]="downArrowICO" class="fas fa-chevrondown icon-colors"></fa-icon>
+    </a>
+  </span>
+</div>
+
+<!-- Seção de "Sobre nós (About)" -->
+<section id="sobre" class="about content">
+  <div class="left-column">
+    <!-- <div class="box-shadow1"></div> -->
+    <div class="text-container">
+      <h5 data-aos="fade-up" data-aos-delay="100">SOBRE NÓS</h5>
+      <p data-aos="fade-up" data-aos-delay="250">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
+        tenetur.</p>
+      <p data-aos="fade-up" data-aos-delay="250">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias est
+        officia temporibus dolores eaque minima impedit eos deserunt quidem assumenda vel, numquam, odit iure nam
+        deleniti illo. Ipsam dolorum voluptatibus quis natus molestiae magnam ut quidem porro neque beatae et, mollitia
+        quod, in eaque omnis assumenda! Inventore impedit doloremque quod?</p>
+      <p data-aos="fade-up" data-aos-delay="250">Lorem ipsum dolor sit amet.</p>
+      <p data-aos="fade-up" data-aos-delay="600"><a href="#menu" class="menu-link">VER MENU</a></p>
+    </div>
+  </div>
+
+  <div class="right-column">
+    <div class="inner-right-column" data-aos="zoom-in-up">
+      <img class="image1" [src]="dynamicPath">
+    </div>
+  </div>
+</section>
+
+
+<!-- Seção dos doces (Menu) -->
+<section id="menu" class="menu content">
+  <div class="inner-container">
+    <h5 class="menu-title">MENU</h5>
+    <div class="upper-row card-row" data-aos="fade-up">
+      <div class="card-deck">
+        <div class="card">
+          <img src="../assets/images/imagem-brigadeiros.jpg" alt="Card image cap" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Nome</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, aut?</p>
+            <p class="card-text">Valor: R$ 9,99</p>
+          </div>
+        </div>
+    
+        <div class="card">
+          <img src="../assets/images/imagem-brigadeiros.jpg" alt="Card image cap" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Nome</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, totam.</p>
+            <p class="card-text">Valor: R$ 9,99</p>
+          </div>
+        </div>
+    
+        <div class="card">
+          <img src="../assets/images/imagem-brigadeiros.jpg" alt="Card image cap" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Nome</h5>
+            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, adipisci.</p>
+            <p class="card-text">Valor: R$ 9,99</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-row card-row" data-aos="fade-up">
+      <div class="card-deck">
+        <div class="card">
+          <img src="../assets/images/imagem-brigadeiros.jpg" alt="Card image cap" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Nome</h5>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, est dolorum.</p>
+            <p class="card-text">Valor: R$ 9,99</p>
+          </div>
+        </div>
+    
+        <div class="card">
+          <img src="../assets/images/imagem-brigadeiros.jpg" alt="Card image cap" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Nome</h5>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, esse!</p>
+            <p class="card-text">Valor: R$ 9,99</p>
+          </div>
+        </div>
+    
+        <div class="card">
+          <img src="../assets/images/imagem-brigadeiros.jpg" alt="Card image cap" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Nome</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam harum distinctio ipsam.</p>
+            <p class="card-text">Valor: R$ 9,99</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Seção de Reserva (Book a Table) -->
+<section id="reserva" class="book-table">
+    <div class="image-container1">
+      <!-- Imagem de fundo ao lado esquerdo da tela -->
+      <img src="../assets/images/cool-dark-background3.jpg" alt="Imagem">
+    </div>
+
+    <div class="form-container">
+      <!-- Form de cadastro de informações -->
+      <h5 data-aos="fade-up" data-aos-delay="100" style="transform: rotateZ(-90deg);">RESERVE AQUI</h5>
+      <form action="" class="form-book">
+        <div class="form-group">
+          <br>
+
+          <!-- FORM BÁSICO -->
+          <span><strong>Básico</strong></span>
+          <br>
+          <label for="nomeC">Nome completo:</label><br>
+          <input type="text" id="nomeC" name="nomeC" placeholder="Digite seu nome completo"><br>
+
+          <label for="idadeI">Idade:</label><br>
+          <input type="number" name="idadeI" id="idadeI" placeholder="Digite a sua idade"><br>
+
+          <label for="telefoneC">Telefone/WhatsApp:</label><br>
+          <input type="tel" name="telefoneC" id="telefoneC" placeholder="Telefone para contato"><br>
+
+          <br>
+          <br>
+
+          <!-- FORM ENDEREÇO -->
+          <span><strong>Endereço</strong></span>
+          <br>
+          <label for="cep">CEP</label><br>
+          <input type="number" name="cep" id="cep" placeholder="Informe seu CEP"><br>
+          <br>
+          <label for="ruaN">Rua:</label><br>
+          <input type="text" name="ruaN" id="ruaN" placeholder="Nome da rua">
+
+          <input type="number" name="numeroC" id="numeroC" placeholder="Número"><br>
+
+          <label for="bairroN">Bairro:</label><br>
+          <input type="text" name="bairroN" id="bairroN" placeholder="Nome do bairro"><br>
+
+          <label for="cidadeN">Cidade:</label><br>
+          <input type="text" name="cidadeN" id="cidadeN" placeholder="Nome da cidade"><br>
+
+          <br>
+          <br>
+          <!-- FORM DATA DE ENTREGA -->
+          <label for="dataE">Data de entrega:</label><br>
+          <input type="date" name="dataE" id="dataE"><br>
+        </div>
+      </form>
+    </div>
+</section>

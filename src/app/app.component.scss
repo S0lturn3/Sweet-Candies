@@ -1,0 +1,65 @@
+@import url("../styles.scss");
+
+
+/* ESTILOS DO HEADER */
+.sticky-header{
+    z-index: 2;
+    height: 64px;
+    width: 100%;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-header1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.title{
+    float: left;
+    /* font-family: 'Emilys Candy', cursive; */
+    font-family: blackSpartan;
+    margin-left: 25px;
+}
+.list-inline{
+    margin-right: 25px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    float: right;
+    overflow: hidden;
+}
+li a{
+    position: relative;
+    margin: 0px 20px;
+    /* margin-top: 15px; */
+    text-decoration: none;
+    font-size: var(--text-font-size);
+    transition: .3s;
+}
+li:last-child{
+    margin-top: 10px;
+    margin-left: 60px;
+}
+// -------------------------------------------------- //
+// ----- UNDERLINE ----- //
+.hover-underline::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    /* margin-bottom: 10px; */
+    background-color: var(--text-color1);
+    transform-origin: bottom left;
+    transition: transform .4s ease-out;
+}
+.hover-underline:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+

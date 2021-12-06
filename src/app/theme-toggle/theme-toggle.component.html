@@ -1,0 +1,20 @@
+<!-- Botão de tema Escuro/Claro -->
+<div>
+    <!-- Cria-se um input de tipo "Checkbox" com classe para CSS e ID para JS/TS -->
+    <input type="checkbox" class="checkbox" id="checkbox" (click)="switchTheme()">
+    
+    <!-- Adiciona-se uma label para o input previamente feito, com uma classe para CSS-->
+    <label for="checkbox" class="label">
+        <fa-icon [icon]="moonICO" class="fas fa-moon icon-colors"></fa-icon>
+        <fa-icon [icon]="sunICO" class="fas fa-sun icon-colors"></fa-icon>
+
+        <!-- Esta div servirá como indicador de qual opção está selecionada -->
+        <div class="ball"></div>
+    </label>
+</div>
+
+
+
+
+
+<!-- Running fine -->

@@ -1,0 +1,361 @@
+/* ---------- IMPORTAÇÕES DE ESTILOS ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap");
+@import url("./app/app.component.scss");
+@import url("./app/theme-toggle/theme-toggle.component.scss");
+
+/* ---------- FONTES PERSONALIZADAS ---------- */
+@font-face {
+    font-family: cafeFrancoise;
+    src: url("./assets/fonts/cafe-francoise/cafe_francoise_d.otf");
+}
+@font-face {
+    font-family: croissantOne;
+    src: url("./assets/fonts/croissant-one/CroissantOne-Regular.otf");
+}
+@font-face {
+    font-family: blackSpartan;
+    src: url("./assets/fonts/black-spartan-personal-use/black_spartan.ttf");
+}
+
+/* ---------- FIM DAS IMPORTAÇÕES ---------- */
+
+
+/* ----- Definição dos temas ----- */
+.dark-theme {
+    /* Cores/Imagens de Fundo */
+    --background-header1: #0f0d0de1;
+    --background-color1: #0f0d0d;
+    --background-image1: url("./assets/images/cool-dark-background2.jpg");
+    --background-image2: url("./assets/images/chocolate-background.jpg");
+    --background-image3: url("./assets/images/cool-dark-background4.jpg");
+    --header-color: #413b3d;
+    --button-color: #1d0911;
+
+    --background-arrow1: rgba(241, 211, 220, 0.1);
+    --background-arrow2: rgba(241, 211, 220, 0.2);
+
+    --tabs-background1: #2e1b19c9;
+    --tabs-background2: #2c0d04;
+
+    /* Gradientes */
+    --box-gradient1: #c94b4b;
+    --box-gradient2: #4b134f;
+
+    /* Bordas */
+    --border-color: #f8cdc8;
+
+    /* Texto */
+    --boxtext-color: #f5f5f5;
+    --text-color1: #f5f5f5;
+    --text-color2: #000000;
+    --scroll-arrow-color: rgb(255, 247, 250);
+    --secondary-color: #000000;
+    --title-font-size: 28px;
+    --text-font-size: 16px;
+
+    /* Sombras */
+    --shadow-color1: #ffadd6;
+    --shadow-color2: #cc756e80;
+}
+.light-theme {
+    /* Cores/Imagens de Fundo */
+    --background-header1: #dee8f0d8;
+    --background-color1: #e0f2fe;
+    --background-image1: url("./assets/images/cool-dark-background7.jpg");
+    --background-image2: url("./assets/images/red-valvet-background.jpg");
+    --background-image3: url("./assets/images/cool-dark-background5.jpg");
+    --header-color: rgb(245, 251, 255);
+    --button-color: rgb(68, 132, 168);
+
+    --background-arrow1: rgba(211, 240, 241, 0.1);
+    --background-arrow2: rgba(211, 240, 241, 0.2);
+
+    --tabs-background1: #c4f1ffe5;
+    --tabs-background2: #41b3f5;
+
+    /* Gradientes */
+    --box-gradient1: #1fa2ff;
+    --box-gradient2: #a6ffcb;
+
+    /* Bordas */
+    --border-color: #34e7e4;
+
+    /* Texto */
+    --boxtext-color: #000000;
+    --text-color1: #000000;
+    --text-color2: #000000;
+    --scroll-arrow-color: rgb(255, 247, 250);
+    --secondary-color: #f5f5f5;
+    --title-font-size: 28px;
+    --text-font-size: 16px;
+
+    /* Sombras */
+    --shadow-color1: #001029ab;
+    --shadow-color2: #0026295d;
+}
+
+/* ----- Estilos individuais ----- */
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+}
+body {
+    width: 100%;
+    max-width: 100%;
+    min-height: 110vh;
+    /* font-family: 'Kalam', cursive; */
+    font-family: "Quicksand", sans-serif;
+    background-image: var(--background-image1);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: var(--text-color1);
+    position: relative;
+    transition: all 0.5s;
+}
+
+h1,
+h2,
+h5,
+p,
+a {
+    color: var(--text-color1);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: var(--title-font-size);
+}
+
+/* --------------- ||| --------------- */
+.home-screen {
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.down-arrow {
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: var(--background-arrow1);
+    color: var(--scroll-arrow-color);
+    transition: all 0.5s;
+}
+.down-arrow:hover {
+    background-color: var(--background-arrow2);
+}
+.ripple-loader div {
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    animation: ripple-loader 2s ease-out infinite;
+}
+@keyframes ripple-loader {
+    0% {
+        top: 75;
+        left: 75;
+        width: 120px;
+        height: 120px;
+        opacity: 1;
+    }
+    100% {
+        top: -75;
+        left: -75;
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+/* ----- Animação da seta para baixo ----- */
+.fa-chevrondown {
+    margin-bottom: 10px;
+    color: var(--scroll-arrow-color);
+    display: block;
+    animation: bounce 2s ease infinite;
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* --------------- ||| --------------- */
+#sobre {
+    background-color: var(--background-color1);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.5s;
+}
+.left-column {
+    color: var(--text-color1);
+    margin: 0;
+    height: 100vh;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+}
+.text-container {
+    padding-right: 20%;
+    padding-left: 20%;
+}
+
+.text-container p {
+    font-size: var(--text-font-size);
+    margin: 30px 0px;
+}
+
+.text-container h5 {
+    /*font-family: 'Emilys Candy', cursive; */
+    font-family: blackSpartan;
+    font-size: 30px;
+    line-height: 50px;
+}
+.menu-link {
+    font-size: var(--text-font-size);
+    width: fit-content;
+    line-height: 45px;
+    padding: 15px;
+    border: 2px solid var(--text-color1);
+    transition: all 0.4s;
+}
+.menu-link:hover {
+    color: var(--secondary-color);
+    background-color: var(--boxtext-color);
+}
+
+.right-column {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 45%;
+    transition: all 0.4s;
+}
+.inner-right-column .image1 {
+    width: 90%;
+    height: 90%;
+    border-radius: 25%;
+    box-shadow: -70px 80px 0px 10px var(--shadow-color2);
+    transition: all 0.4s;
+}
+
+/* --------------- ||| --------------- */
+#menu {
+    background-color: var(--background-color1);
+    min-height: 110vh;
+    width: 100%;
+}
+.inner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.menu-title{
+    margin-top: 10vh;
+    font-family: blackSpartan;
+    color: var(--text-color1);
+}
+.card-row{
+    margin: 25px 0px;
+    width: 50%;
+}
+.card{
+    padding: 2px;
+    background-color: var(--tabs-background2);
+    border-bottom-right-radius: 20px;
+    transition: all .4s;
+}
+.card:hover{
+    transform: translate(-5px, -15px);
+    box-shadow: 5px 15px var(--shadow-color2);
+}
+.card-title{
+    margin-left: 5px;
+    font-family: blackSpartan;
+    color: var(--text-color1);
+}
+.card-img-top{
+    max-height: 45%;
+}
+.card-body{
+    margin: 20px 0px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card p{
+    color: var(--text-color1);
+    font-size: var(--text-font-size);
+    margin: 20px 0px;
+    transition: all .4s;
+}
+
+/* --------------- ||| --------------- */
+#reserva {
+    background-color: var(--background-color1);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.image-container1{
+    width: 45%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+#reserva img{
+    width: 60%;
+    height: 60%;
+    border-radius: 15px;
+    box-shadow: 450px 50px var(--shadow-color2);
+}
+
+.form-container{
+    width: 55%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+/*  ====================
+        FORM INPUTS
+    ====================    */
+#ruaN{
+    width: 65%;
+    margin-right: 10%;
+}
+#numeroC{
+    width: 25%;
+}
