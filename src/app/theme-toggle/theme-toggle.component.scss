@@ -2,11 +2,10 @@
     box-sizing: border-box;
 }
 
-// ----- Declaração de variáveis ----- //
-.icon-colors{
-    --moon-color: rgb(34, 37, 39);
-    --sun-color: rgb(255, 247, 250);
-}
+/* ----- Declaração de variáveis ----- */
+$moon-color: rgb(34, 37, 39);
+$sun-color: rgb(255, 247, 250);
+
 
 // ----- Estilos individuais ----- //
 .pointer{
@@ -19,25 +18,26 @@
 }
 
 .label{
+    margin: 0;
+    height: 26px;
+    width: 50px;
+    padding: 5px;
+    border-radius: 50px;
     background-color: rgba(17, 17, 17, 0.1);
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px;
-    position: relative;
-    border-radius: 50px;
-    height: 26px;
-    width: 50px;
 }
 
 .ball{
-    background-color: #fff;
     height: 22px;
     width: 22px;
-    border-radius: 50%;
-    position: absolute;
     top: 2px;
     left: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
     cursor: pointer;
     transition: .1s linear;
 }
@@ -49,14 +49,11 @@
 
 // -- Cores dos ícones -- //
 .fa-moon{
-    color: var(--moon-color);
+    color: $moon-color;
     z-index: 2;
 }
 .fa-sun{
-    color: var(--sun-color);
+    color: $sun-color;
     z-index: 2;
 }
-
-
-
 
