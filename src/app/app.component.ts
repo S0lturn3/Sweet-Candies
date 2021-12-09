@@ -16,9 +16,9 @@ export class AppComponent implements OnInit{
 
   onThemeChange(){
     if (this.theme == 'dark-theme') {
-      this.dynamicPath = 'chocolate-background.jpg';
+      this.dynamicPath = '../assets/images/chocolate-background.jpg';
     } else{
-      this.dynamicPath = 'red-valvet-background.jpg';
+      this.dynamicPath = '../assets/images/red-valvet-background.jpg';
     }
   }
 
