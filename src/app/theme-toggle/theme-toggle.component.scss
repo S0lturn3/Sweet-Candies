@@ -7,7 +7,7 @@ $moon-color: rgb(34, 37, 39);
 $sun-color: rgb(255, 247, 250);
 
 
-// ----- Estilos individuais ----- //
+/* ----- Estilos individuais ----- */
 .pointer{
     cursor: pointer;
 }
@@ -47,7 +47,7 @@ $sun-color: rgb(255, 247, 250);
     background-color: var(--text-color1);
 }
 
-// -- Cores dos ícones -- //
+/* -- Cores dos ícones -- */
 .fa-moon{
     color: $moon-color;
     z-index: 2;
