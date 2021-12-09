@@ -46,7 +46,8 @@
 /*  ---------- Fonts ----------    */
 $subtitle-font-size: 1.7em;
 $text-font-size: 1.1em;
-$subtitle-font-weight: 700;
+
+$subtitle-font-weight: 900;
 
 /*  ---------- Paddings/Margins ----------  */
 $global-spacing: 1.2rem;
@@ -96,17 +97,22 @@ $black: #000000;
     --background-arrow2: rgba(241, 211, 220, 0.2);
     --tabs-background1: #2e1b19c9;
     --tabs-background2: #2c0d04;
+
     /* Gradientes */
     --box-gradient1: #c94b4b;
     --box-gradient2: #4b134f;
+
     /* Bordas */
     --border-color: #f8cdc8;
+
     /* Texto */
     --boxtext-color: #f5f5f5;
     --text-color1: #f5f5f5;
     --text-color2: #000000;
     --scroll-arrow-color: rgb(255, 247, 250);
     --secondary-color: #000000;
+    --font-weight: 500;
+
 
     /* Sombras */
     --shadow-color1: #ffadd6;
@@ -125,17 +131,21 @@ $black: #000000;
     --background-arrow2: rgba(211, 240, 241, 0.2);
     --tabs-background1: #c4f1ffe5;
     --tabs-background2: #41b3f5;
+
     /* Gradientes */
     --box-gradient1: #1fa2ff;
     --box-gradient2: #a6ffcb;
+
     /* Bordas */
     --border-color: #34e7e4;
+
     /* Texto */
     --boxtext-color: #000000;
     --text-color1: #000000;
     --text-color2: #000000;
     --scroll-arrow-color: rgb(255, 247, 250);
     --secondary-color: #f5f5f5;
+    --font-weight: 700;
 
     /* Sombras */
     --shadow-color1: #001029ab;
@@ -182,7 +192,7 @@ a {
     ---------- Background ----------    */
 .home-screen {
     height: 100vh;
-    padding: 100px;
+    padding: 10em;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -190,8 +200,8 @@ a {
 
 /*  ---------- Arrow animation ----------    */
 .down-arrow {
-    width: 80px;
-    height: 80px;
+    width: 4rem;
+    height: 5rem;
     padding: 20px;
     position: relative;
     display: flex;
@@ -217,34 +227,33 @@ a {
     0% {
         top: 75;
         left: 75;
-        width: 120px;
-        height: 120px;
+        width: 4rem;
+        height: 5rem;
         opacity: 1;
     }
     100% {
         top: -75;
         left: -75;
-        width: 300px;
-        height: 300px;
+        width: 9rem;
+        height: 10rem;
         opacity: 0;
     }
 }
 
 .fa-chevrondown {
-    margin-bottom: 10px;
     color: var(--scroll-arrow-color);
     display: block;
     animation: bounce 2s ease infinite;
 }
 @keyframes bounce {
     0% {
-        transform: translateY(0);
+        transform: translateY(-10px);
     }
     50% {
-        transform: translateY(15px);
+        transform: translateY(10px);
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(-10px);
     }
 }
 
@@ -282,14 +291,17 @@ a {
 .text-container h3 {
     font-family: blackSpartan;
     font-size: $subtitle-font-size;
+    font-weight: $subtitle-font-weight;
     line-height: 50px;
 }
 .text-container p {
     font-size: $text-font-size;
+    font-weight: var(--font-weight);
     margin: 30px 0px;
 }
 .menu-link {
     font-size: $text-font-size;
+    font-weight: var(--font-weight);
     width: fit-content;
     line-height: 45px;
     padding: 1rem;
@@ -340,6 +352,7 @@ a {
     font-family: blackSpartan;
     color: var(--text-color1);
     font-size: $subtitle-font-size;
+    font-weight: $subtitle-font-weight;
 }
 .card-row{
     margin: 25px 0px;
@@ -360,6 +373,7 @@ a {
     font-family: blackSpartan;
     color: var(--text-color1);
     font-size: $subtitle-font-size;
+    font-weight: $subtitle-font-weight;
 }
 .card-img-top{
     max-height: 45%;
@@ -376,6 +390,9 @@ a {
     font-size: $text-font-size;
     margin: 20px 0px;
     transition: all .4s;
+}
+.card p:last-child{
+    font-weight: $subtitle-font-weight;
 }
 
 
