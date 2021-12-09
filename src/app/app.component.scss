@@ -30,7 +30,6 @@
         background-color: var(--background-header1);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         z-index: 999;
-        /* padding: $global-spacing; */
         display: inline-flex;
         align-items: center;
         justify-content: space-around;
@@ -52,13 +51,14 @@
         position: relative;
         margin: $individual-spacing;
         font-size: $links-font-size;
+        font-weight: $title-font-weight;
         transition: .3s;
     }
     li:last-child{
         margin: $individual-spacing;
     }
     
-    // ----- UNDERLINE ----- //
+    /* ----- UNDERLINE ----- */
     .hover-underline::after{
         content: '';
         position: absolute;
